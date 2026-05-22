@@ -57,6 +57,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:.4rem;z-index:1}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--muted),transparent);animation:scrollpulse 1.8s ease-in-out infinite}
 @keyframes scrollpulse{0%,100%{opacity:.3;transform:scaleY(.8)}50%{opacity:1;transform:scaleY(1)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-tag{animation:fadeInUp .8s .1s ease both}
+.hero-name{animation:fadeInUp .8s .25s ease both}
+.hero-tagline{animation:fadeInUp .8s .4s ease both}
+.hero-chips{animation:fadeInUp .8s .55s ease both}
+.hero-cta{animation:fadeInUp .8s .7s ease both}
 
 /* SECTIONS COMMON */
 section{padding:6rem 2.5rem}
@@ -178,6 +184,7 @@ footer{text-align:center;padding:2rem;font-family:'Syne',sans-serif;font-size:.7
   .tl-dot{display:none}
   .tl-date{padding-top:0}
   .creative-grid{grid-template-columns:1fr}
+  .hero-scroll{display:none}
 }
 </style>
 </head>
@@ -502,7 +509,7 @@ footer{text-align:center;padding:2rem;font-family:'Syne',sans-serif;font-size:.7
         </ul>
       </div>
       <div class="skill-card">
-        <div class="skill-card-title" style="color:var(--coral-d);text-align:left;">Communication</div>
+        <div class="skill-card-title" style="color:var(--coral-d)">Communication</div>
         <ul class="skill-list" style="font-size:.64rem">
           <li><span class="skill-pip" style="background:var(--coral)"></span>Science communication</li>
           <li><span class="skill-pip" style="background:var(--coral)"></span>Public speaking / EmCee</li>
